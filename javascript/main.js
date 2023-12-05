@@ -6,15 +6,13 @@ const loader = document.querySelector(".loader");
 const result = document.getElementById("result");
 const checkButton = document.getElementById("check-button");
 const numberInput = document.getElementById("number-input");
-let paste = document.getElementById("paste");
+const paste = document.getElementById("paste");
 
 // pressing the paste button pasted from your clipboard
 paste.addEventListener("click", async () => {
-  const READ = await navigator.clipboard.readText();
-  numberInput.value = READ;
-});
-paste.addEventListener("click", () => {
-  console.log("clicked");
+  const Number = await navigator.clipboard.readText();
+  numberInput.value = Number;
+  console.log(Number);
 });
 
 window.addEventListener("load", () => {
