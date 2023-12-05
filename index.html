@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/main.css" />
-    <script src="javascript/main.js" defer></script>
+    <link rel="stylesheet" href="style/header.css" />
     <link
       rel="shortcut icon"
       href="https://avatars.githubusercontent.com/u/121341169?v=4"
@@ -17,6 +17,32 @@
     <title>Check SIM Card provider</title>
   </head>
   <body class="main-container">
-    p
+    <!-- header section -->
+    <header class="header">
+      <nav class="navigation">
+        <a href="/" class="link">Number Checker</a>
+      </nav>
+    </header>
+    <!-- main stuffs -->
+    <main class="checker-container">
+      <label for="number-input">Enter your phone number:</label>
+      <div class="input">
+        <input
+          type="number"
+          autocomplete="off"
+          id="number-input"
+          placeholder="Phone Number"
+        />
+        <button type="submit" id="paste">
+          Paste
+          <i class="fa-solid fa-paste"></i>
+        </button>
+      </div>
+      <button type="submit" id="check-button">Check</button>
+      <div class="loader"></div>
+      <p id="result"></p>
+    </main>
+    <!-- javascripts -->
+    <script src="javascript/main.js"></script>
   </body>
 </html>
